@@ -17,62 +17,20 @@ public class MainActivity extends AppCompatActivity {
     private Button mudarFrase;
 
     private String[] frases = {
-            // Suas frases aqui...
-
-            "01 - e com certeza \n" +
-                    "\n" +
-                    "a nota alta vem\n",
-
-            "2 – Uma mulher calada\n" +
-                    "\n" +
-                    "é uma pistola com silenciador \n",
-
-            "03 – Minha amiga postou: Meu cabelo é minha vida\n" +
-                    "\n" +
-                    "Fui e comentei: Vida dura HEIN\n" +
-                    "\n" +
-                    "amiga: ela foi e me exclui!\n",
-
-            "04 – Meu cupido deve ser traficante \n" +
-                    "\n" +
-                    "Só me traz droga\n",
-
-           "05 – Com uma chinelada bem dada \n" +
-                    "\n" +
-                    "Minha mãe alinhava meu\n" +
-                    "\n" +
-                    "chacras, limpava minha alma,\n" +
-                    "\n" +
-                    "ativava meus sentidos,",
-                    "\n" +
-                    "Desobstruia meu caminho",
-
-            "06 – Estude.. pois a caneta é \n" +
-                    "\n" +
-                    "mais leve que a pá.\n" +
-                    "\n" +
-                    "Também pode significar nostalgia, incapacidade e depressão.\n" +
-                    "\n" +
-                    "As nuvens, eventualmente, passam, e o sol brilha novamente, por mais longa que seja a tempestade.",
-
-            "07 – Professor, a prova é com \n" +
-                    "\n" +
-                    "Consulta?\n" +
-                    "\n" +
-                    "Claro. Quem trouxe o cérebro\n" +
-                    "\n" +
-                    "pode usar À vontade.\n" ,
-
-   };
-
+            "01 - E com certeza a nota alta vem",
+            "2 – Uma mulher calada é uma pistola com silenciador",
+            "03 – Minha amiga postou: Meu cabelo é minha vida\nFui e comentei: Vida dura HEIN\namiga: ela foi e me exclui!",
+            "04 – Meu cupido deve ser traficante\nSó me traz droga",
+            "05 – Com uma chinelada bem dada\nMinha mãe alinhava meu chacras, limpava minha alma,\nativava meus sentidos,\nDesobstruía meu caminho",
+            "06 – Estude.. pois a caneta é mais leve que a pá.\nTambém pode significar nostalgia, incapacidade e depressão.\nAs nuvens, eventualmente, passam, e o sol brilha novamente, por mais longa que seja a tempestade.",
+            "07 – Professor, a prova é com consulta?\nClaro. Quem trouxe o cérebro pode usar à vontade."
+    };
 
     private int[] imagens = {
-            // Seus IDs de recursos de imagens aqui...
-
             R.drawable.nota,
             R.drawable.mulher,
             R.drawable.cabeloduro,
-           R.drawable.cupido,
+            R.drawable.cupido,
             R.drawable.chineladas,
             R.drawable.caneta,
     };
@@ -91,14 +49,15 @@ public class MainActivity extends AppCompatActivity {
         textFrase.setMovementMethod(new ScrollingMovementMethod());
     }
 
+    // Adicione o código do botão ao arquivo XML correspondente (activity_main.xml)
     public void mudarFrase(View view) {
-        // Gere um número aleatório para selecionar uma frase
+        // Gera um número aleatório para selecionar uma frase
         int indiceAleatorio = new Random().nextInt(frases.length);
 
-        // Atualize o texto da TextView com a frase selecionada
+        // Atualiza o texto da TextView com a frase selecionada
         textFrase.setText(frases[indiceAleatorio]);
 
-        // Atualize a imagem usando o ID de recurso correspondente à frase
+        // Atualiza a imagem usando o ID de recurso correspondente à frase
         imagemFrase.setImageResource(imagens[indiceAleatorio]);
     }
 }
