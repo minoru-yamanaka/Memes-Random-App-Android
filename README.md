@@ -1,5 +1,5 @@
 
-# Memes_Random_App_Androd
+# Memes_Random_App_AndroiSd
 
 Este projeto é uma aplicação Android desenvolvida em Java utilizando o Android Studio. O objetivo principal é exibir frases motivacionais aleatórias juntamente com imagens relacionadas a cada frase. Abaixo estão as principais características e funcionalidades do código:
 
